@@ -493,7 +493,6 @@ scheduler, so a single Render web service is enough.
 | `DB_CONNECTION` / `DB_PORT` | `mysql` / `4000` |
 | `DB_HOST`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD` | secrets from TiDB Cloud |
 | `MYSQL_ATTR_SSL_CA` | `/etc/ssl/certs/ca-certificates.crt` |
-| `TICKETS_FULLTEXT_SEARCH` | `false` (TiDB uses a different full-text feature, so search uses `LIKE`) |
 | `SESSION_DRIVER`, `CACHE_STORE`, `QUEUE_CONNECTION` | `database` |
 | `DB_QUEUE_RETRY_AFTER` | `3700` |
 | `MAIL_MAILER` | `log` (or SMTP settings) |
