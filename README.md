@@ -95,8 +95,8 @@ otherwise the default is `password`.
 
 | Email | Role | Password |
 |---|---|---|
-| `admin@example.com` | Admin | `SEED_PASSWORD` or `password` |
-| `agent.aisha@example.com` | Agent | `SEED_PASSWORD` or `password` |
+| `admin@example.com` | Admin | `SEED_PASSWORD` or `admin@example.com` |
+| `agent.aisha@example.com` | Agent | `SEED_PASSWORD` or `agent.aisha@example.com` |
 | `agent.daniel@example.com` | Agent | `SEED_PASSWORD` or `password` |
 | `customer.fatima@example.com` | Customer | `SEED_PASSWORD` or `password` |
 | `customer.omar@example.com` | Customer | `SEED_PASSWORD` or `password` |
