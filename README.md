@@ -126,17 +126,6 @@ For local use, `php artisan queue:work` must be running for queued emails and CS
 Cron may run `* * * * * php artisan schedule:run`. Local mail uses the log driver by default;
 Docker uses Mailpit.
 
-## Render and TiDB Cloud
-
-The production image is a single Render web service running Apache, PHP, the queue worker, and
-the scheduler in the container. Configure TiDB Cloud with its MySQL-compatible host, port 4000,
-and the appropriate SSL certificate. Use `<prefix>.root` username, password, and `/storage/cert/isrgrootx1.pem` as `MYSQL_ATTR_SSL_CA`. Set
-`TICKETS_FULLTEXT_SEARCH=false` because TiDB uses the escaped `LIKE` fallback.
-
-Render's filesystem is ephemeral, so uploaded attachments and import files are lost on restart.
-`TICKETS_ATTACHMENTS_DISK` and `IMPORTS_DISK` are environment-driven. An S3-compatible disk
-requires `league/flysystem-aws-s3-v3`, which is not installed.
-
 ## Tests and architecture
 
 Create `sla_test`, keep it separate from the development `sla` database, and run:
