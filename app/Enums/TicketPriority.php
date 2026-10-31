@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Enums;
+
+enum TicketPriority: string
+{
+    case Low = 'low';
+    case Medium = 'medium';
+    case High = 'high';
+    case Critical = 'critical';
+
+    public function label(): string
+    {
+        return match ($this) {
+            self::Low => 'Low',
+            self::Medium => 'Medium',
+            self::High => 'High',
+            self::Critical => 'Critical',
+        };
+    }
+
+    /**
+     * @return array<int, string>
+     */
+    public static function values(): array
+    {
+        return array_column(self::cases(), 'value');
+    }
+
+    public static function options(): array
+    {
+        return array_combine(self::values(), array_map(fn (self $priority): string => $priority->label(), self::cases()));
+    }
+}
